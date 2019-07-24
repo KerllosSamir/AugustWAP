@@ -1,8 +1,7 @@
-#outer
-{
+#outer {
     border: 2px dashed black;
     padding: 10px;
-   float: left;
+    float: left;
     width: 100%;
 }
 
@@ -13,20 +12,19 @@
     margin: 10px;
     float: left;
 }
-.clear
-{
+
+.clear {
     clear: left;
 }
 
-.menu
-{
-    list-style-type:none;
+.menu {
+    list-style-type: none;
     padding: 10px;
     background-color: red;
     text-align: center;
 }
 
-.menu li{
+.menu li {
     display: inline-block;
     padding: 10px;
     border: 1px solid black;
@@ -34,22 +32,21 @@
     height: 20px;
     font-weight: bold;
     font-size: 15px;
-    font-family: "Courier New",sans-serif;
+    font-family: "Courier New", sans-serif;
 }
 
-.layout2
-{
+.layout2 {
     padding: 10px;
     width: 500px;
     background-color: lightgray;
-    overflow:hidden ;
+    overflow: hidden;
 }
-.layout2h1
-{
+
+.layout2h1 {
     background-color: yellow;
 }
-.layout2col
-{
+
+.layout2col {
     background-color: lightblue;
     float: right;
     width: 100px;
@@ -63,6 +60,19 @@
     line-height: 100px;
     text-align: center;
 }
-#a { background-color: lightblue; float: left }
-#b { background-color: pink; float: right ; clear:left}
-#c { background-color: lightgray; clear:left}
+
+#a {
+    background-color: lightblue;
+    float: left
+}
+
+#b {
+    background-color: pink;
+    float: right;
+    clear: left
+}
+
+#c {
+    background-color: lightgray;
+    clear: left
+}
