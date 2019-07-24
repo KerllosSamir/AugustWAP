@@ -1,0 +1,72 @@
+body {
+    color: #404040;
+    font-size: 11pt;
+    font-family: Georgia, Garamond, sans-serif;
+    background-image: url("../img/silverware.jpg");
+}
+
+h1.main {
+    color: #A4A400;
+    text-align: center;
+    background-color: #F0F0F0;
+    font-family: "Lucida Sans Unicode", Helvetica, Arial;
+    font-size: 22pt;
+    text-decoration: underline;
+    word-spacing: 0.25em;
+}
+
+h1.sub {
+    color: #A4A400;
+    text-align: left;
+    background-color: #F0F0F0;
+    font-family: "Lucida Sans Unicode", Helvetica, Arial;
+    font-size: 18pt;
+    text-decoration: underline;
+    word-spacing: 0.25em;
+}
+
+.recipeList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.decimalList
+{
+    list-style-type: decimal;
+}
+
+.decimalList ul
+{
+    list-style-type: circle;
+}
+
+.boldSpan
+{
+    font-weight: bold;
+}
+.lineThrogh
+{
+    text-decoration: line-through;
+}
+
+.comment
+{
+    background-color:orange;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.rightdiv
+{
+    text-align: right;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.ingredientList
+{
+    list-style-image: url('../img/pie_icon.gif');
+}

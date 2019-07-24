@@ -1,0 +1,72 @@
+body
+{
+    background-color: lightgray;
+    color: blue;
+}
+em
+{
+    color:brown;
+    font-family: sans-serif , "Courier New";
+}
+h1 ,h2 ,h3
+{
+    color: darkblue;
+}
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.center {
+    text-align: center;
+}
+ul.homeul {
+    margin:auto;
+    list-style-type:disc;
+    text-align: left;
+    display: inline-block;
+}
+
+.emotions
+{
+    width: 20vw;
+    height: 20vw;
+}
+
+.horizontalList
+{
+    display: inline;
+    list-style-type: none;
+}
+.horizontalList li {
+    display: inline;
+}
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+a:visited {
+    text-decoration: none;
+    color: blueviolet;
+}
+p::first-letter
+{
+    text-transform:capitalize;
+}
+dt
+{
+    color: orangered;
+}
+
+.MovieUL
+{
+    list-style-type: decimal;
+    display: flex;
+    flex-direction: column-reverse;
+}
