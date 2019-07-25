@@ -1,0 +1,43 @@
+.header {
+    background-color: lightskyblue;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+ul li a {
+  color: white;
+}
+
+.menu
+{
+    background-color: darkslategrey;
+}
+
+.columns {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+}
+.col-1
+{
+    background-color: #999999;
+
+    height: 100%;
+}
+.col-2
+{
+    background-color:lightgray;
+    height: 100%;
+}
+.col-3
+{
+    background-color: dimgray;
+    height: 100%;
+}
+.footer {
+    background-color: darkslategrey;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
