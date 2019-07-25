@@ -1,0 +1,58 @@
+.header {
+    background-color: lightskyblue;
+    padding: 20px;
+    text-align: center;
+
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    background-color: darkslategrey;
+}
+
+.menu div {
+    padding: 10px;
+    border-right-color: black;
+    border-right-style: solid;
+    border-right-width: 2px;
+}
+
+.menu div a {
+    color: white;
+    text-decoration: none;
+}
+
+.columns {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+}
+.col-1
+{
+
+    background-color: #999999;
+    width: 20%;
+    height: 100%;
+}
+.col-2
+{
+
+    background-color:lightgray;
+    width: 60%;
+    height: 100%;
+}
+.col-3
+{
+
+    background-color: dimgray;
+    width: 20%;
+    height: 100%;
+}
+.footer {
+    background-color: darkslategrey;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
