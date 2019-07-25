@@ -1,0 +1,145 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image: url("../img_mov_rev/background.png");
+    background-repeat: repeat;
+    font-size: 8pt;
+    font-family: Verdana,Tahoma,sans-serif;
+}
+header
+{
+    background-image: url("../img_mov_rev/bannerbg.png");
+    background-repeat: repeat-x;
+    height: 50px;
+}
+header img
+{
+    height: 100%;
+    margin: auto;
+    display: block;
+}
+.movieTitle
+{
+    font-size: 24pt;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana;
+    text-shadow: 3px 3px #999999;
+    margin: 10px;
+    padding: 10px;
+}
+.container
+{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    max-width: 800px;
+    border-radius: 20px;
+    border-color: gray;
+    border-style: solid;
+    border-width: 4px;
+    overflow: visible;
+}
+.leftSection
+{
+    width: 69%;
+
+}
+.righSection
+{
+    background-color: #A2B964;
+    font-size: 8pt;
+    font-family: Arial, sans-serif;
+    border-top-right-radius:15px ;
+    border-bottom-right-radius:15px ;
+}
+.righSection img
+{
+    height:412px;
+    width:250px;
+    border-top-right-radius:15px ;
+}
+
+.righSection dl
+{
+    width:150px;
+}
+.rotten
+{
+    background-image: url("../img_mov_rev/rbg.png");
+    background-repeat: repeat-x;
+    height: 83px;
+    border-top-left-radius:15px ;
+}
+.rotten img
+{
+    float: left;
+    border-top-left-radius:15px ;
+}
+.rotten span
+{
+    font-size: 48pt;
+    font-weight: bold;
+    color: red;
+}
+.review
+{
+    display: flex;
+    flex-direction: row;
+}
+.review .column
+{
+    width: 50%;
+    padding: 10px;
+}
+
+.quote
+{
+    background-color: #E8DC9B;
+    font-size: 8pt;
+    border-color: gray;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    padding: 8px;
+    overflow: visible;
+}
+.quote img
+{
+    float: left;
+    padding: 5px;
+    height: 25px;
+    width: 25px;
+}
+
+.reviewer
+{
+    font-style: italic;
+    clear: left;
+    margin-bottom: 20px;
+}
+.reviewer img
+{
+    float: left;
+    padding: 5px;
+    height:33px;
+    width:35px
+}
+.reviewer span
+{
+    display: block;
+}
+
+footer
+{
+    background-color: #A2B964;
+    height: 50px;
+}
+
+.validation
+{
+    float: right;
+}
+.validation a{
+    display: block;
+}
