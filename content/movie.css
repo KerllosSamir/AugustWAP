@@ -138,7 +138,9 @@ footer
 
 .validation
 {
-    float: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 .validation a{
     display: block;
