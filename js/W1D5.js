@@ -1,6 +1,6 @@
 /* runs test to see if expected argument is === to value returned by function2test argument */
 function myFunctionTest(expected, found) {
-    //if (expected === found)
+
     if (JSON.stringify(expected) === JSON.stringify(found)) {
         return "TEST SUCCEEDED";
     } else {
@@ -43,18 +43,20 @@ console.log("Expected output of isVowel(\"b\") is false  " + myFunctionTest(fals
 
 /*sum() is a function that sums all the numbers in an array of numbers*/
 function sum(arr) {
-    return arr.reduce(function (preVal, elem, i, array) {
-        return preVal + elem;
-    })
+   var s=0;
+   for(let i=0 ; i<arr.length; i++)
+       s+=arr[i];
+   return s;
 }
 
 console.log("Expected output of sum([1,2,3,4]) is 10  " + myFunctionTest(10, sum([1, 2, 3, 4])));
 
 /*multiply() is a function that multiplies all the numbers in an array of numbers*/
 function multiply(arr) {
-    return arr.reduce(function (preVal, elem, i, array) {
-        return preVal * elem;
-    })
+    var s=1;
+    for(let i=0 ; i<arr.length; i++)
+        s*=arr[i];
+    return s;
 }
 
 console.log("Expected output of multiply([1,2,3,4]) is 24  " + myFunctionTest(24, multiply([1, 2, 3, 4])));
