@@ -4,6 +4,7 @@ window.onload=function ()
     document.getElementById("chkBold").onchange=modifyFont;
     document.getElementById("btnBigLatin").onclick=modifyTextToBigLatin;
     document.getElementById("btnMalkovitch").onclick=modifyTextToMalkovitch;
+
 }
 
 function runFontChange()
