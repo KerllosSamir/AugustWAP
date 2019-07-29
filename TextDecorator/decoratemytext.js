@@ -25,7 +25,7 @@ function modifyFont() {
         txtDecorate.style.fontWeight = "green";
         txtDecorate.style.color = "red";
         txtDecorate.style.textDecoration = "underline";
-        document.body.style.backgroundImage = "url('textdecorator/hundred-dollar-bill.jpg')";
+        document.body.style.backgroundImage = "url('TextDecorator/hundred-dollar-bill.jpg')";
     }
     else
     {
