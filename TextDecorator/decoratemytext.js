@@ -2,6 +2,8 @@ window.onload=function ()
 {
     document.getElementById("btnBigDec").onclick=runFontChange;
     document.getElementById("chkBold").onchange=modifyFont;
+    document.getElementById("btnBigLatin").onclick=modifyTextToBigLatin;
+    document.getElementById("btnMalkovitch").onclick=modifyTextToMalkovitch;
 }
 
 function runFontChange()
@@ -41,4 +43,23 @@ function changeTetxAreaFont()
     let currentFont = parseInt(window.getComputedStyle(document.getElementById("txtDecorate")).fontSize);
     currentFont += 2;
     document.getElementById("txtDecorate").style.fontSize = currentFont + "pt";
+}
+
+function modifyTextToBigLatin()
+{
+    let txtDecorate = document.getElementById("txtDecorate");
+}
+function modifyTextToMalkovitch() {
+    let txtDecorate = document.getElementById("txtDecorate");
+
+    let words=txtDecorate.value.split(' ').map((elem)=>
+    {
+        if (elem.length>=5)
+        {
+            return 'Malkovich';
+        }
+        return elem;
+    });
+
+    txtDecorate.value=words.join(' ');
 }
