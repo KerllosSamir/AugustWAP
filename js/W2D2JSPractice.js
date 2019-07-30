@@ -40,11 +40,69 @@ const module = (function () {
         }
     }
 
+    /*this method used to build up a list structure from an array  {value: 10, rest: {value: 20, rest: null}}*/
+    let list = function () {
+        return {
+            value: null,
+            rest: null,
+        };
+    };
+
+    function arrayToList(arr) {
+        let linkedList = list();
+        linkedList.value = arr[0];
+        linkedList.rest = list();
+        let node = linkedList.rest;
+        for (let i = 1; i < arr.length; i++) {
+            node.value = arr[i];
+            if (i !== arr.length - 1) {
+                node.rest = list();
+                node = node.rest;
+            }
+        }
+        return linkedList;
+    }
+
+    function listToArray(list) {
+        let arr = [];
+
+        while (list) {
+            arr.push(list.value);
+            list = list.rest;
+        }
+        return arr;
+    }
+
+    function nth(list, index) {
+        while (index > 0) {
+            index--;
+            list = list.rest;
+        }
+        return list.value;
+    }
+
+    function prepend(val, next) {
+        let linkedList = list();
+        linkedList.value = val;
+        if (next)
+        {
+            linkedList.rest = list();
+            linkedList.rest = next;
+        }
+
+        return linkedList;
+    }
+
     return {
         testMethod: myFunctionTest,
         reverseArray: reverseArray,
         reverseArrayInPlace: reverseArrayInPlace,
-        deepEqual:deepEqual
+        deepEqual: deepEqual,
+        arrayToList: arrayToList,
+        listToArray: listToArray,
+        nth: nth,
+        prepend:prepend
+
     };
 
 })();
@@ -60,5 +118,27 @@ console.log("Expected output of reverseArrayInPlace([1, 2, 3, 4, 5, 6]) is [6,5,
 let obj = {here: {is: "an"}, object: 2};
 console.log('obj = {here: {is: "an"}, object: 2}');
 console.log("Expected output of deepEqual(obj, obj) is true " + module.testMethod(true, module.deepEqual(obj, obj)));
-console.log("Expected output of deepEqual(obj, {here: 1, object: 2}) is false " + module.testMethod(false, module.deepEqual(obj, {here: 1, object: 2})));
-console.log("Expected output of deepEqual(obj, {here: {is: \"an\"}, object: 2}) is true " + module.testMethod(true, module.deepEqual(obj, {here: {is: "an"}, object: 2})));
+console.log("Expected output of deepEqual(obj, {here: 1, object: 2}) is false " + module.testMethod(false, module.deepEqual(obj, {
+    here: 1,
+    object: 2
+})));
+console.log("Expected output of deepEqual(obj, {here: {is: \"an\"}, object: 2}) is true " + module.testMethod(true, module.deepEqual(obj, {
+    here: {is: "an"},
+    object: 2
+})));
+console.log('');
+//{"value":1,"rest":{"value":2,"rest":{"value":3,"rest":{"value":4,"rest":{"value":0,"rest":null}}}}}
+console.log("Expected output of arrayToList([1, 2, 3, 4]) is {\"value\":1,\"rest\":{\"value\":2,\"rest\":{\"value\":3,\"rest\":{\"value\":4,\"rest\":{\"value\":0,\"rest\":null}}}}} ");
+console.log(JSON.stringify(module.arrayToList([1, 2, 3, 4])));
+
+console.log('');
+console.log('value of this call : listToArray(arrayToList([10, 20, 30]))');
+console.log(module.listToArray(module.arrayToList([10, 20, 30])));
+
+console.log('');
+console.log('value of this call : nth(arrayToList([10, 20, 30]), 1)');
+console.log(module.nth(module.arrayToList([10, 20, 30]), 1));
+
+console.log('');
+console.log('value of this call : prepend(10, prepend(20, null))');
+console.log(JSON.stringify(module.prepend(10, module.prepend(20, null))));
