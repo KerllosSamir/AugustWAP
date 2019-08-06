@@ -14,12 +14,14 @@ $(function () {
             $(this).hide();
         }
 
+        /*thia method used to create and show circles*/
         function showCircle() {
             $('.circle')
                 .css({'width': initialWidth + 'px', 'height': initialWidth + 'px'})
                 .show();
         }
 
+        /*this method handles circle width change*/
         function widthChanged() {
             initialWidth = parseInt($('#txtWidth').val());
             startGrow();
@@ -38,11 +40,24 @@ $(function () {
             });
         }
 
+        /*this method handles circle grow rate change*/
         function growRateChanged() {
-            growSpeed= parseInt($('#txtGrowRate').val());
+            growSpeed = parseInt($('#txtGrowRate').val());
             startGrow();
         }
 
+        function noCirclesChanged() {
+            let num = parseInt($('#txtNoCircles').val());
+            //$('.circle').remove();
+            for (let i = 0; i < num; i++) {
+                $('#container').append($('<div>', {
+                    'class': 'circle',
+                    'css': {'background-color': "#" + ((1 << 24) * Math.random() | 0).toString(16)}
+                }));
+            }
+        }
+
+        /*this method handles circle redraw every specific period*/
         function startGrow() {
             showCircle();
             if (timerID) {
@@ -57,16 +72,18 @@ $(function () {
             startGrow: startGrow,
             widthChanged: widthChanged,
             growSizeChanged: growSizeChanged,
-            growRateChanged:growRateChanged
+            growRateChanged: growRateChanged,
+            noCirclesChanged: noCirclesChanged
         };
-
     }());
 
-
     /*Attach events*/
-    $('.circle').on("click", circleModule.removeCircle);
+    circleModule.noCirclesChanged();
+    $('#container').on("click", 'div', circleModule.removeCircle);
     $('#start').on('click', circleModule.startGrow);
     $('#txtWidth').on('change', circleModule.widthChanged);
     $('#txtGrowAmount').on('change', circleModule.growSizeChanged);
     $('#txtGrowRate').on('change', circleModule.growRateChanged);
+    $('#txtNoCircles').on('change', circleModule.noCirclesChanged);
+
 });
